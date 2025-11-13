@@ -1,0 +1,764 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url('helvetica-255-webfont/Helvetica.woff') format('woff');
+  src: url('helvetica-255-webfont/Helvetica-Bold.woff') format('woff');
+}
+
+/* Global Scrollbar Styling */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Enables scrolling globally */
+}
+
+body::-webkit-scrollbar {
+  width: 16px !important;
+  height: 16px !important;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #F0EBE5 !important;
+  border-radius: 0 !important;
+}
+body::-webkit-scrollbar-track {
+  background-color: #826644 !important;
+}
+
+#landing{
+  max-height: 100vh;
+}
+
+.slide-169-1-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #826644;
+    width: 100%;
+    height: 100%;
+}
+.vector-icon {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    mix-blend-mode: normal;
+    background-color: #826644;
+}
+
+.slide-169-1 {
+    width: 100%;
+    position: relative;
+    background-color: #F0EBE5;
+    height: 1000px;
+    overflow: hidden;
+}
+
+
+/* topbar */
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    scroll-snap-type: y mandatory; /* Enable vertical snap */
+    scroll-behavior: smooth; /* Smooth scrolling for soft snap */
+    height: 100vh; /* Viewport height */
+    overflow-x: hidden;
+    overflow-y: scroll; /* Enable vertical scrolling */
+  }
+  
+.content {
+  height: 120vh; /* Makes the page tall to enable scrolling */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  scroll-snap-align: start;
+}
+
+.content:nth-child(odd) {
+  background-color: #826644; /* Different color for even sections */
+  color:#F0EBE5;
+}
+
+.content:nth-child(even) {
+  background-color: #F0EBE5; /* Different color for even sections */
+  color:#826644;
+}
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: #826644;
+    color: #F0EBE5;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+    transform: translateY(-100%);
+    justify-content: space-between; /* Separates logo and links */
+    align-items: center; /* Vertically centers items */
+    z-index: 100; /* Ensures navbar is always on top */
+  }
+
+  .navbar.visible {
+    display: block; /* Show navbar */
+  }
+
+  .navbar img{
+    height: 6vh;
+    padding: 1rem;
+  }
+
+  .navbar a {
+    background-color:#F0EBE5;
+    color:#826644;
+    text-decoration: none;
+    padding: 0.75rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    overflow: hidden;
+  }
+  
+  .navbar a:hover {
+    background-color: #826644;
+    color:#F0EBE5
+
+  }
+  
+  /*2nd test*/
+
+
+/* Landing Page Styling */
+
+  
+#landing {
+  background: #826644;
+  color: #F0EBE5;
+
+  scroll-snap-align: start;
+}
+
+.landing-grid{
+  height: 100vh; /* Full viewport height */
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 1fr; 
+  grid-gap: 5%;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+
+#landing #number-icon {
+  width: 100%; /* Adjust the logo size */
+  height: 100%; /* Maintains aspect ratio */
+  padding: 0rem; /* Adds spacing below the logo */
+  align-self: center;
+}
+
+#landing #vector-icon{
+  width: 100%; /* Adjust the logo size */
+  height: 100%; /* Maintains aspect ratio */
+  margin: 0rem; /* Adds spacing below the logo */
+}
+
+#landing h1 {
+  font-size: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  display: flex;
+  justify-content: space-between; /* Separates logo and links */
+  align-items: center;
+}
+
+#landing p {
+  font-size: 1.5rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+
+.landing-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  text-decoration: none;
+  outline: none;
+  grid-column: span 2;
+}
+
+
+.landing-buttons button {
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  outline: none;
+  border: 0;
+  background-color:#F0EBE5;
+  color:#826644;
+  text-decoration: none;
+  padding: 1rem;
+  margin: 0.75rem;
+  font-size: 5rem;
+  overflow: visible;
+}
+
+.landing-buttons button:hover{
+  transition:linear 100ms;
+  background-color: #826644;
+  color:#F0EBE5;
+}
+
+.scroll-down {
+  margin-top: 2rem;
+  font-size: 6rem;
+  color: #F0EBE5;
+  text-decoration: none;
+  animation: bounce 1.5s infinite;
+  grid-column: span 3;
+  align-self: center;
+  justify-self: center;
+}
+
+
+.grid3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5fr;
+  gap: 3rem;
+  padding:3%;
+  align-items: center;
+  height: 70%;
+}
+
+.content-header{
+  grid-column: span 3;
+  text-align: center;
+  font-size: 7rem;
+}
+
+.timeline{
+  font-size: 3rem;
+  margin-left: 20%;
+}
+
+.timeline .date {
+  color: #c1babd;
+}
+.timeline .fls2n {
+  color: #826644;
+  background-color: #F0EBE5;
+}
+
+
+#content2-content{
+  margin-left: 3rem;
+}
+
+#content2-grid{
+  grid-template-columns: 1.5fr 2fr 2fr;
+}
+
+#tema{
+  font-size: 3rem;
+  background-color: #826644;
+  color: #F0EBE5;
+
+  padding:2rem;
+  margin:1rem;
+}
+
+#tema .subtema{
+  font-size: 3rem;
+  color: #b09c83;
+  padding:2rem;
+}
+
+#content4-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
+  align-items: center;
+}
+
+#content4-content {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.foto {
+  width: 5rem;
+  height: 5rem;
+}
+
+
+.juri{
+  grid-column: span 2;
+  margin-left: 2rem;
+  padding: 2rem;
+  background-color: #e5d0b8;
+}
+
+.juri-sub{
+  margin-bottom: 2rem;
+  
+}
+
+.juri-sub h1{
+  background-color: #826644;
+  color:#F0EBE5;
+  margin: 0rem;
+  font-size: 2rem;
+  padding:0.3rem;
+}
+.juri-sub p{
+  margin: 0rem;
+  font-size:1.5rem;
+  padding:0.3rem
+}
+.juri-sub a{
+  text-decoration: none;
+  text-decoration: underline;
+  color:#826644;
+}
+
+.juri-sub a:hover{
+  color:#F0EBE5;
+  background-color: #826644;
+}
+
+#daftar-grid{
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:0;
+  height: 90vh;
+  margin-top: 10%;
+}
+
+.daftar-buttons{
+  grid-row:span 3;
+  grid-column: span 3;
+}
+
+#daftar button{
+ padding:0.75rem;
+ font-size: 3.25rem;
+ margin:0;
+ text-align: left;
+ gap:1rem;
+ margin: 0.75rem;
+ text-decoration: underline;
+}
+
+#daftar .landing-buttons{
+  display: grid;
+  flex-wrap: none;
+  justify-content: center;
+  outline: none;
+}
+
+
+
+#down-icon {
+  height: 5rem;
+  mix-blend-mode: normal;
+  fill: #826644;
+  forced-color-adjust: #826644;
+}
+
+#logo{
+  justify-content: center;
+  justify-self: center;
+  text-align: center;
+  align-self: center;
+  align-content: center;
+  text-decoration: none;
+  grid-column: span 3;
+}
+
+/* Main Content Styling */
+.content {
+  padding: 20px;
+  background: #F0EBE5;
+}
+
+.text {
+  grid-column: span 2;
+}
+
+.content h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+#siapa-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  gap: 3rem;
+  padding:4rem;
+  align-items: center;
+}
+
+#siapa-content{
+  grid-column: span 3;
+}
+
+.team{
+  grid-column: span 3;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.individual h1{
+  font-size: 2rem;
+  background-color: #F0EBE5;
+  color:#826644;
+  padding:0.5rem;
+  margin-bottom: 0;
+}
+.individual p{
+  margin:0;
+  padding:0.5rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1500px){
+  body::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #F0EBE5 !important;
+    border-radius: 0 !important;
+  }
+  body::-webkit-scrollbar-track {
+    background-color: #826644 !important;
+  }
+  .navbar a {
+    padding: 0.7rem;
+    margin-right: 1rem;
+    font-size: 1.8rem;
+  }
+  .landing-buttons button{
+    font-size: 4rem;
+  }
+
+  .content-header{
+    font-size: 5.5rem;
+  }
+
+  .juri{
+    grid-column: span 2;
+    grid-row: span 2;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: #F0EBE5;
+  }
+
+  .juri-sub h1{
+    background-color: #826644;
+    color:#F0EBE5;
+    margin: 0rem;
+    font-size: 1.8rem;
+  }
+  .juri-sub p{
+    margin: 0rem;
+    font-size:1.2rem;
+  }
+
+  .team{
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  #siapa-content{
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1200px){
+
+  .landing-buttons button {
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    outline: none;
+    border: 0;
+    background-color:#F0EBE5;
+    color:#826644;
+    text-decoration: none;
+    padding: 0.75rem;
+    margin: 0.5rem;
+    font-size: 3.5rem;
+    overflow: visible;
+  }
+
+  .content {
+    height: 170vh; /* Makes the page tall to enable scrolling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    scroll-snap-align: start;
+  }
+
+  .grid3{
+    height: 88%;
+    padding: 1rem;
+  }
+
+  #landing{
+    height:100vh;
+  }
+
+  .navbar a {
+    padding: 0.7rem;
+    margin-right: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .juri{
+    grid-column: span 1;
+    margin:0;
+  }
+
+  .juri-sub h1{
+    font-size: 1.5rem;
+  }
+
+  #daftar{
+    height:100vh;
+    font-size: 1rem;
+  }
+
+  #daftar .landing-buttons button{
+    font-size: 1.7rem;
+    margin:0.8rem;
+    padding:0.8rem;
+  }
+
+  #daftar-grid{
+    grid-template-columns: 1;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 80vh;
+  }
+
+  #logo{
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    grid-column: span 1;
+  }
+
+  .content p{
+    font-size: 1.5rem;
+  }
+
+  .grid3{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 4fr;
+  }
+
+  .content-header{
+    font-size: 3rem;
+    grid-column: span 1;
+  }
+
+  .daftar-buttons{
+    grid-column: span 1;
+  }
+
+  .team{
+    grid-column: span 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #siapa-content{
+    grid-column: span 1;
+    margin: 0;
+  }
+
+  #siapa-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    gap: 3rem;
+    padding:4rem;
+    align-items: center;
+  }
+  
+  #daftar-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .text{
+    grid-column: span 1;
+    font-size: 0.1rem;
+  }
+
+  .timeline p{
+    font-size: 4rem;
+  }
+
+  #content4-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr 3fr;
+    align-items: center;
+  }
+
+  p{
+    font-size: 1.2rem;
+  }
+
+  #siapa-grid{
+    padding: 1rem;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: #826644;
+    color: #F0EBE5;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+    transform: translateY(-100%);
+    justify-content: space-between; /* Separates logo and links */
+    align-items: center; /* Vertically centers items */
+    z-index: 100; /* Ensures navbar is always on top */
+  }
+
+  .navbar.visible {
+    display: block; /* Show navbar */
+  }
+
+  .navbar img{
+    height: 4vh;
+    padding: 1rem;
+  }
+
+  .navbar a {
+    background-color: #F0EBE5;
+    color: #826644;
+    text-decoration: none;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.2rem; /* Lebih kecil untuk mobile */
+    overflow: hidden;
+  }
+  
+  .navbar a:hover {
+    background-color: #826644;
+    color:#F0EBE5
+
+  }
+
+  #content2-grid{
+    grid-template-columns: 1fr;
+  }
+
+  #content2-content{
+    margin:1%;
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 500px){
+  .content p{
+    font-size: 1.1rem;
+  }
+
+  .timeline p{
+    font-size: 2rem;
+  }
+
+  #daftar-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin:0;
+    padding:0;
+  }
+
+  #daftar{
+    margin:0;
+    padding:0;
+  }
+
+  .daftar-buttons{
+    grid-row:span 3;
+    grid-column: span 1;
+  }
+
+  #daftar .landing-buttons button{
+    font-size: 1.7rem;
+    margin:0.6rem;
+    padding:0.6rem;
+  }
+
+  #landing .landing-buttons button{
+    font-size: 2.5rem;
+  }
+
+  #content2-content{
+    margin:1rem;
+    max-height: 100%;
+  }
+
+  #tema{
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .individual h1{
+    font-size: 1.5rem;
+  }
+
+  .grid3{
+    max-height: 88%;
+  }
+
+  .timeline p{
+    font-size: 2rem;
+    margin:0;
+    padding:0;
+  }
+
+  .timeline{
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+  }
+
+  .navbar a{
+    font-size: 20px;
+    padding: 10px
+  }
+
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
